@@ -32,7 +32,7 @@ my_entry =  Entry(lf, font=("Helvetica", 24))
 my_entry.pack(pady=20, padx=20)
 
 # Entry box for Returned Password
-pw_entry = Entry(root, text="", font=("Helvetica", 24))
+pw_entry = Entry(root, text="", font=("Helvetica", 24), bd=0, bg="systembuttonface")
 pw_entry.pack(pady=20)
 
 # Frame for the buttons
