@@ -8,6 +8,8 @@ root.geometry("500x300")
 
 my_password = chr(randint(33,126))
 
+# Generate password Function
+
 def new_rand():
     pw_entry.delete(0, END)
     pw_length = int(my_entry.get())
@@ -19,9 +21,11 @@ def new_rand():
 
     pw_entry.insert(0, my_password)
 
+# Copy to clipboard fuction
 
 def clipper():
-    pass
+    root.clipboard_clear()
+    root.clipboard_append(pw_entry.get())
 
 # Label Frame
 lf = LabelFrame(root, text="How many characters?")
