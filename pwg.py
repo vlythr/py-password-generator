@@ -9,7 +9,16 @@ root.geometry("500x300")
 my_password = chr(randint(33,126))
 
 def new_rand():
-    pass
+    pw_entry.delete(0, END)
+    pw_length = int(my_entry.get())
+
+    my_password = ''
+
+    for x in range(pw_length):
+        my_password += chr(randint(33,126))
+
+    pw_entry.insert(0, my_password)
+
 
 def clipper():
     pass
