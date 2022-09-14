@@ -4,7 +4,7 @@ from random import randint
 
 root = Tk()
 root.title('Password Generator')
-root.geometry("500x300")
+root.geometry("600x400")
 
 my_password = chr(randint(33,126))
 
@@ -28,15 +28,15 @@ def clipper():
     root.clipboard_append(pw_entry.get())
 
 # Label Frame
-lf = LabelFrame(root, text="How many characters?")
+lf = LabelFrame(root, text="How many characters?", font=("Helvetica", 24), bd=0)
 lf.pack(pady=20)
 
 # Entry box to designate Number of Characters
-my_entry =  Entry(lf, font=("Helvetica", 24))
+my_entry =  Entry(lf, font=("Helvetica", 24), bd=0)
 my_entry.pack(pady=20, padx=20)
 
 # Entry box for Returned Password
-pw_entry = Entry(root, text="", font=("Helvetica", 24), bd=0, bg="systembuttonface")
+pw_entry = Entry(root, text="", font=("Helvetica", 24), bd=0)
 pw_entry.pack(pady=20)
 
 # Frame for the buttons
